@@ -112,7 +112,18 @@ function ExpensesContextProvider({ children }) {
         });
     }
 
-    return <ExpensesContext.Provider>{children}</ExpensesContext.Provider>;
+    const value = {
+        expenses: expensesState,
+        addExpense: addExpense,
+        deleteExpense: deleteExpense,
+        updateExpense: updateExpense,
+    };
+
+    return (
+        <ExpensesContext.Provider value={value}>
+            {children}
+        </ExpensesContext.Provider>
+    );
 }
 
 export default ExpensesContextProvider;
