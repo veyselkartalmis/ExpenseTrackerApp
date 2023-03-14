@@ -4,6 +4,7 @@ import { useContext, useLayoutEffect } from "react";
 import { GlobalStyles } from "../constants/styles";
 import IconButton from "../components/UI/IconButton";
 import Button from "../components/UI/Button";
+import ExpenseForm from "../components/ManageExpense/ExpenseForm";
 import { ExpensesContext } from "../store/expenses-context";
 
 function ManageExpense({ route, navigation }) {
@@ -46,6 +47,7 @@ function ManageExpense({ route, navigation }) {
 
     return (
         <View style={styles.container}>
+            <ExpenseForm />
             <View style={styles.buttons}>
                 <Button
                     style={styles.button}
