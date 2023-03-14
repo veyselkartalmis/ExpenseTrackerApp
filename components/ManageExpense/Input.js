@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     input: {
         backgroundColor: GlobalStyles.colors.primary100,
         color: GlobalStyles.colors.primary700,
-        padding: 6,
+        padding: 12,
         borderRadius: 6,
         fontSize: 18,
     },
