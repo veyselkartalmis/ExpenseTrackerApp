@@ -1,4 +1,5 @@
-import { View } from "react-native";
+import { View, StyleSheet } from "react-native";
+import { GlobalStyles } from "../../constants/styles";
 
 import Input from "./Input";
 
@@ -6,7 +7,7 @@ function ExpenseForm() {
     function amountChangeHandler() {}
 
     return (
-        <View>
+        <View style={styles.formContainer}>
             <Input
                 label="Amount"
                 textInputConfig={{
@@ -35,3 +36,10 @@ function ExpenseForm() {
 }
 
 export default ExpenseForm;
+
+const styles = StyleSheet.create({
+    formContainer: {
+        backgroundColor: GlobalStyles.colors.primary800,
+        padding: 24,
+    },
+});
