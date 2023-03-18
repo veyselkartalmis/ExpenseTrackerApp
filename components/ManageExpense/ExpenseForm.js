@@ -6,11 +6,13 @@ import { GlobalStyles } from "../../constants/styles";
 import Input from "./Input";
 import Button from "../UI/Button";
 
-function ExpenseForm({ onCancel, onSubmit, submitButtonLabel }) {
+import { getFormattedDate } from "../../util/date";
+
+function ExpenseForm({ onCancel, onSubmit, submitButtonLabel, defaultValues }) {
     const [inputValues, setInputValues] = useState({
-        amount: "",
-        date: "",
-        description: "",
+        amount: defaultValues ? defaultValues.amount.toString() : "",
+        date: defaultValues ? getFormattedDate(defaultValues.date) : "",
+        description: defaultValues ? defaultValues.description : "",
     });
 
     function inputChangedHandler(inputIdentifier, enteredValue) {
